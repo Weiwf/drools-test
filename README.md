@@ -1,3 +1,5 @@
+springboot + drools 测试demo
+
 1.启动项目
 
 2.浏览器访问：http://localhost:8080/getDiscount?type=diamond
