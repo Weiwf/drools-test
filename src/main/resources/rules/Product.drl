@@ -1,0 +1,17 @@
+package rules
+
+import com.wei.demo.model.Product
+
+rule "Offer for dimand"
+    when
+        productObject:Product(type == "diamond")
+    then
+        productObject.setDiscount(15);
+end
+
+rule "Offer for gold"
+    when
+        productObject:Product(type == "gold")
+    then
+        productObject.setDiscount(25);
+end
