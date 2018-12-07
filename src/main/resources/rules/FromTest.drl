@@ -1,0 +1,12 @@
+package rules
+
+import com.wei.demo.model.User
+import java.util.List
+
+rule "from 测试"
+    when
+        $list:List()
+        $user:User(name == "www") from $list
+    then
+        System.out.println("[www] is from " + $list);
+end

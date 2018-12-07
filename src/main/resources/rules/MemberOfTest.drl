@@ -1,0 +1,12 @@
+package rules
+
+import com.wei.demo.model.User
+import java.util.List
+
+rule "memberOf 测试"
+    when
+        $list:List()
+        $user:User(age memberOf $list)
+    then
+        System.out.println($user.getAge() + " 是 " + $list + " 的成员！");
+end

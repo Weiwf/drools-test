@@ -13,8 +13,4 @@ public class DroolsTestApplication {
 		SpringApplication.run(DroolsTestApplication.class, args);
 	}
 
-	@Bean
-	public KieContainer kieContainer() {
-		return KieServices.Factory.get().getKieClasspathContainer();
-	}
 }

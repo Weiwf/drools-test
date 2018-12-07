@@ -1,0 +1,17 @@
+package rules
+
+import com.wei.demo.model.User
+
+rule "用户测试"
+    when
+        $user:User()
+    then
+        System.out.println("user=[" + $user + "]");
+end
+
+rule "用户属性测试"
+    when
+        $user:User(age > 18)
+    then
+        System.out.println("age > 18 的用户信息:" + $user);
+end

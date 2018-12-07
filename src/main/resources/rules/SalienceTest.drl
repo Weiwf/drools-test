@@ -1,0 +1,28 @@
+package rules
+
+import com.wei.demo.model.User
+
+//salience确定优先级，数字越大的越先执行，没有确定salience，drl文件内的rule随机执行
+rule "salience 测试1"
+    salience 9
+    when
+        $user:User()
+    then
+        System.out.println("执行 salience=" + 9);
+end
+
+rule "salience 测试2"
+    salience 7
+    when
+        $user:User()
+    then
+        System.out.println("执行 salience=" + 7);
+end
+
+rule "salience 测试3"
+    salience 8
+    when
+        $user:User()
+    then
+        System.out.println("执行 salience=" + 8);
+end
