@@ -1,3 +1,4 @@
+
 - drools-test提供了一些drools的简单测试例子，drl文件放在 resources -> rules 中
 - 项目提供了两种直接获取drl文件进行测试的方式：
    - 使用DroolsUtils工具类 ：DroolsUtils提供了两个方法：execute(Object[] objects)和execute(Object[] objects, List<byte[]> bytesList)，
@@ -10,4 +11,4 @@
       ruleService.execute(new Object[]{});
    ```
 - drools-test提供了一个获取RuleService的工厂类RuleServiceFactory，支持并发操作。
-   
+
