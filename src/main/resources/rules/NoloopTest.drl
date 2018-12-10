@@ -1,0 +1,12 @@
+package rules;
+import com.wei.demo.model.User
+//no-loop防止死循环
+rule "Noloop 测试"
+    // no-loop用来控制规则在执行的过程中当条件再次满足是否会再次触发规则，默认为false，
+    //no-loop true
+    when $user:User(age >= 18)
+    then
+        $user.setAge($user.getAge() + 1);
+        update($user)
+        System.out.println("noloop 测试输出 ...");
+end
